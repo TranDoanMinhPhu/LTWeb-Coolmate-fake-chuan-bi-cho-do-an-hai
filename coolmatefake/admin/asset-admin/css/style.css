@@ -1,0 +1,85 @@
+.root{
+    --main-bg-color: #414e66;
+    --sub-bg-color: #f2f2fb;
+    --top-height:70px;
+    --main-transition: all 0.3s ease;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    color: unset;
+}
+li{
+    list-style: none;
+}
+.row-grid{
+    display: grid;
+    justify-content: space-between;
+}
+/*main-admin*/
+.admin .row-grid{
+    grid-template-columns: 20% 80%;
+}
+
+
+/*Admin Sidebar*/
+.admin-sidebar{
+    height: 100vh;
+    background-color: #414e66;
+
+}
+.admin-sidebar-top img{
+    width: 70px;
+}
+.admin-sidebar-top{
+    text-align: center;
+    height: var(--top-height);
+    border-bottom: 1px solid gray;
+}
+.admin-sidebar-content ul li a i{
+    margin-right: 6px;
+}
+.admin-sidebar-content{
+    padding: 30px 0 0 30px;
+    color:red
+}
+
+.admin-sidebar-content ul li{
+    padding: 6px;
+    transition: var(--main-transition);
+}
+.admin-sidebar-content ul li a{
+    width: 100%;
+    display: block;
+    display: flex;
+
+}
+.admin-sidebar-content>ul>li>a:nth-child(3){
+    margin: auto;
+}
+.admin-sidebar-content ul li:hover{
+    background-color: #737e9f;
+    cursor: pointer;
+}
+/*sub-menu*/
+.sub-menu{
+    height: 0;
+    overflow:hidden;
+    transition: var(--main-transition);
+}
+/* .sub-menu.active{
+    height: 60px;
+} */
+.sub-menu li:hover a{
+    color: yellow;
+    cursor: pointer;
+}
+/*admin-content*/
+.admin-content{
+    background-color: var(--sub-bg-color);
+}
